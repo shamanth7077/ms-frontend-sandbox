@@ -10,6 +10,8 @@ import {
   getRoutePath
 } from 'CommonUtil/CommonUtil.js';
 
+import JSTable, {generateRandomTableData} from 'CompareTables/JSTable.js';
+
 export class Dashboard extends React.Component {
   componentDidMount() {
   }
@@ -20,7 +22,16 @@ export class Dashboard extends React.Component {
     };
   }
 
+  renderCSSTable() {
+    return null;
+  }
+
+  renderJSTable() {
+    return null;
+  }
+
   render() {
+    const {rows, columns,} = generateRandomTableData();
     return (
       <div>
         <h1>Dashboard</h1>
@@ -31,6 +42,16 @@ export class Dashboard extends React.Component {
         </ButtonToolbar>
         <p style={{marginTop:32}}>Place your sample below this line (Dashboard/Dashboard.js):</p>
         <hr style={{border: '1px solid black'}} />
+        <div>
+          <JSTable
+            numOfFirstFixedColumns={3}
+            rows={rows}
+            rowKey="id"
+            columns={columns}
+            maxWidth={800}
+            maxHeight={500}
+          />
+        </div>
       </div>
     );
   }
