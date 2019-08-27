@@ -24,6 +24,7 @@ import {
 } from 'CommonUtil/CommonUtil.js';
 import MSNotification from 'MSNotification/MSNotification.js';
 import rootReducer from 'Global/RootReducer.js';
+
 // Initialize store
 
 /* eslint-disable no-underscore-dangle */

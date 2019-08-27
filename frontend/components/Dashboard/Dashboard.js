@@ -9,6 +9,7 @@ import {
 import {
   getRoutePath
 } from 'CommonUtil/CommonUtil.js';
+import { SortableTable } from '../SortableTable/SortableTable';
 
 export class Dashboard extends React.Component {
   componentDidMount() {
@@ -31,6 +32,7 @@ export class Dashboard extends React.Component {
         </ButtonToolbar>
         <p style={{marginTop:32}}>Place your sample below this line (Dashboard/Dashboard.js):</p>
         <hr style={{border: '1px solid black'}} />
+        <SortableTable />
       </div>
     );
   }

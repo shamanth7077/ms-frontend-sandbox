@@ -25,43 +25,18 @@ const columns = [
     property: 'name',
     header: {
       label: 'Name',
-      transforms: [
-        label => ({
-          onClick: () => console.log(`clicked ${label}`)
-        })
-      ]
     }
   },
   {
     property: 'tools',
     header: {
-      label: 'Active',
-      transforms: [
-        label => ({
-          onClick: () => console.log(`clicked ${label}`)
-        })
-      ]
-    },
-    cell: {
-      formatters: [
-        tools => tools.hammer ? 'Hammertime' : 'nope'
-      ]
+      label: 'Active'
     }
   },
   {
     property: 'country',
     header: {
-      label: 'Country',
-      transforms: [
-        label => ({
-          onClick: () => console.log(`clicked ${label}`)
-        })
-      ]
-    },
-    cell: {
-      formatters: [
-        country => countries[country]
-      ]
+      label: 'Country'
     }
   }
 ];
